@@ -29,3 +29,12 @@ usbrelay = [
 	[b':FE05000F0000FE\r\n', b':FE05000FFF00FF\r\n'], # channel-16
 	[b':FE0F00000010020000E1\r\n', b':FE0F0000001002FFFFE3\r\n'] # all channels
 ] 
+
+def ch_on(channel_index):
+	ser.write(usbrelay[channel_index][1])
+	sleep(delay)
+
+def ch_off(channel_index):
+	ser.write(usbrelay[channel_index][0])
+	sleep(off_delay)
+
