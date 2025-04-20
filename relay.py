@@ -38,3 +38,7 @@ def ch_off(channel_index):
 	ser.write(usbrelay[channel_index][0])
 	sleep(off_delay)
 
+if __name__ == "__main__":
+	ch_on()
+	ch_off()
+	ser.close()
